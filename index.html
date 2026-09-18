@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      🧠 PROJECT: Link Library + Media + Embed
+
+      ✅ MODULE TOPICS THIS PROJECT PRACTICES
+      1) Introduction to Semantic HTML
+      2) Understanding Semantic HTML (choosing tags by meaning)
+      3) Anchor Tags & Hyperlinks
+      4) Adding Images, Audio, and Video
+      5) Embedding content with <iframe>
+
+      🎯 PROJECT GOAL
+      Build a semantic link library page that teaches anchor tags AND includes media + an iframe embed.
+
+  
+    -->
+
+    <!-- STEP 1 — Add the basic <meta> tags -->
+    <!--
+      Inside <head>, create these tags EXACTLY:
+      1) <meta charset="UTF-8">
+      2) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      3) <title> ... </title> (use the project name)
+      4) <meta name="description" content="..."> (1 sentence about the page)
+      (Optional) 5) <meta name="author" content="Your Name">
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Library Media Embed</title>
+    <meta name="description" content="A semantic link library that contains anchor tags, media, and embedded content using iframes." />
+    <meta name="author" content="Jared Stander" />
+
+    <!-- STEP 2 — Link the CSS file -->
+    <!--
+      Add this line in <head>:
+      <link rel="stylesheet" href="styles.css">
+      This CSS is just a helper so you can SEE your sections.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- STEP 3 — Create the outer page container -->
+    <!--
+      Add ONE wrapper <div> with class="page".
+      Everything else will go inside this wrapper.
+      Example structure (do NOT copy literally; you must write it):
+      <div class="page"> ... </div>
+    -->
+
+    <!-- STEP 4 — Add the main semantic layout tags -->
+    <!--
+      Inside .page, add these tags in this order:
+      1) <header> ... </header>
+      2) <nav> ... </nav>
+      3) <main> ... </main>
+      4) <aside> ... </aside>
+      5) <footer> ... </footer>
+
+      WHY THIS MATTERS:
+      These tags tell the browser and screen readers what each part is.
+    -->
+
+    <!-- STEP 5 — Header content -->
+    <!--
+      Inside <header>, add:
+      - One <h1> (the main title of the page)
+      - One <p class="small"> (a short subtitle)
+      - OPTIONAL but recommended: a skip link at the very top:
+        <a class="skip" href="#content">Skip to content</a>
+    -->
+
+    <!-- STEP 6 — Navigation with internal anchor links -->
+    <!--
+      Inside <nav>, create a list of links using:
+      <ul> and <li> tags.
+
+      You MUST include at least 4 links that jump to sections on the page:
+      - One link to the main content area: href="#content"
+      - One link to your media section: href="#media"
+      - One link to your embed section: href="#embed"
+      - One link to a final section: href="#extras" (or another id you choose)
+
+      IMPORTANT RULE:
+      The href like "#media" ONLY works if a section later has id="media".
+    -->
+
+    <!-- STEP 7 — Main content + section IDs -->
+    <!--
+      Give <main> an id="content" so the "Skip to content" link works.
+      Inside <main>, you will create MULTIPLE <section> blocks.
+      Each section should have:
+      - A heading (<h2>)
+      - Content inside (paragraphs, lists, articles, etc.)
+
+      REQUIRED sections inside <main>:
+      A) <section id="media"> ... </section>
+      B) <section id="embed"> ... </section>
+      C) <section id="extras"> ... </section>
+    -->
+
+    <!-- STEP 8 — Favorites list + external links -->
+    <!--
+      Inside <section id="extras"> create a 'Favorite Resources' list.
+      Use <ul> and <li>.
+      Add at least 5 links, and for each external link use:
+      target="_blank" and rel="noopener"
+      Make the link text descriptive (example: 'MDN HTML Reference', not 'click here').
+    -->
+
+    <!-- STEP 9 — Media section (image + audio + video) -->
+    <!--
+      Inside <section id="media"> add:
+      - One <figure> with <img> + <figcaption>
+      - One <audio controls> with a <source>
+      - One <video controls> with a <source>
+      Use placeholder file paths for audio/video if needed.
+    -->
+
+    <!-- STEP 10 — Embed section (iframe) -->
+    <!--
+      Inside <section id="embed"> embed something helpful for learning:
+      - YouTube tutorial iframe OR
+      - Google Maps iframe for a fake 'office location'
+      Make sure iframe includes title="...".
+    -->
+
+    <!-- STEP 11 — Create 2–3 resource cards using <article> -->
+    <!--
+      Still inside <main>, create 2–3 <article class="card"> blocks.
+      Each article should include:
+      - <h3> title
+      - <p> description
+      - One link (<a>) that points to a resource
+    -->
+
+    <!-- STEP 12 — Aside + footer -->
+    <!--
+      Aside: add a short 'Link Best Practices' checklist in a <ul>.
+      Footer: add a short note explaining why descriptive links help accessibility.
+    -->
+
+    <!-- STEP LAST — Checklist before you finish -->
+    <!--
+      ✅ Semantic tags used: header/nav/main/section/article/aside/footer
+      ✅ Nav links jump correctly (ids exist)
+      ✅ Image uses alt text + (preferably) figure/figcaption
+      ✅ Audio uses controls + has a <source>
+      ✅ Video uses controls + has a <source>
+      ✅ iframe is embedded (YouTube or Maps) + has a title attribute
+      ✅ Link text is descriptive (not 'click here')
+    -->
+    <div class="page">
+      <header>
+        <a class="skip" href="#content">Skip to content</a>
+        <h1>Link Library Media Embed</h1>
+        <p class="small">This page displays a link library and embedded content, such as images, audio, video, and iframes.</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#content">Main Content</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#embeds">Embeds</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+      <main id="content">
+        <section id="media">
+          <h2>Media</h2>
+            <figure class="card">
+              <img src="assets/gus_cat.jpg" alt="Gus the Cat" />
+              <figcaption>This is a photo of Gus the Cat sleeping on a cat tree.</figcaption>
+           </figure>
+           <audio controls>
+              <source src="assets/sample-audio.mp3" type="audio/mpeg" />
+           </audio>
+           <video controls>
+              <source src="assets/sample-video.mp4" type="video/mp4">
+           </video>
+        </section>
+        <section id="embeds">
+          <h2>Embeds</h2>
+          <iframe title="Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1432.966109351464!2d-71.45264184602271!3d42.96719848225446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e24e9534533af9%3A0xbe8e2f7b680f6e73!2sA%20Market!5e0!3m2!1sen!2sus!4v1789756118435!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+        <section id="resources">
+          <h2>Favorite Resources</h2>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">Mozilla Developer Network (MDN)</a></li>
+            <li><a href="https://www.w3.org/" target="_blank" rel="noopener">World Wide Web Consortium (W3C)</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a></li>
+            <li><a href="https://www.wcag.com/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG)</a></li>
+            <li><a href="https://teamtreehouse.com/" target="_blank" rel="noopener">Treehouse Online Coding Education Platform</a></li>
+          </ul>
+        </section>
+        <article class="card">
+          <h3>Lesser Known Uses Of Better Known Attributes</h3>
+          <p>HTML attributes are like little instructions that we add to the markup of elements to make them do certain things or behave in certain ways. For example, most of us know that the target attribute with a value of _blank opens the link in a new tab or window. But did you know that you can use it on the form element, too? John Rhea presents several lesser-known uses for common HTML attributes.</p>
+          <a href="https://www.smashingmagazine.com/2025/01/lesser-known-uses-better-known-attributes/" target="_blank" rel="noopener">Read "Lesser Known Uses Of Better Known Attributes"</a>
+        </article>
+        <article class="card">
+          <h3>https://www.smashingmagazine.com/2024/05/in-praise-of-the-basics/</h3>
+          <p>What does it mean to learn the “basics”, or fundamentals, of front-end web development? Is starting with HTML and CSS still the best entry point to learn how to make websites and apps when we have a seemingly endless supply of frameworks that abstract those building blocks with their own opinions and syntax flavors? Geoff Graham thinks so and discusses why you might consider going “back to basics” to start or move forward in your career.</p>
+          <a href="" target="_blank" rel="noopener">Read "https://www.smashingmagazine.com/2024/05/in-praise-of-the-basics/"</a>
+        </article>
+        <article class="card">
+          <h3>https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/</h3>
+          <p>This article is the first of two parts about a guide to making websites accessible to keyboard users. Here Cristian Diaz covers a good set of practices and recommendations on how to use HTML and CSS to create a great experience for keyboard users.</p>
+          <a href="" target="_blank" rel="noopener">Read "https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/"</a>
+        </article>
+      </main>
+      <aside>
+        <h2>Link Best Practices</h2>
+        <ul>
+          <li>Use descriptive text for for the link text and avoid "click here" or similar</li>
+          <li>When the link destination is a different website, consider using target="_blank" to open the link in a new tab</li>
+          <li>For links to different websites, adding the attribute rel="noopener" is a good security practice</li>
+        </ul>
+      </aside>
+      <footer>
+        <p class="small">Descriptive links help with accessibility by giving screen readers a clear destination for each link, since tabbing through a page can often mean the screen reader is reading the link text without the content around it for context.</p>
+      </footer>
+    </div>
+  </body>
+</html>
